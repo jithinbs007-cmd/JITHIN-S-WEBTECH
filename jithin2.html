@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+html,body{height:100%;width:100%;background:#0b0b0b;color:white;overflow-x:hidden;display:flex;justify-content:center;align-items:flex-start;padding:20px 0;}
+#particles-js{position:fixed;width:100%;height:100%;top:0;left:0;z-index:-1;background:#0b0b0b;}
+
+.container{
+  width:100%;
+  max-width:500px;
+  text-align:center;
+  padding:40px 30px;
+  border:3px solid #00f7ff;
+  border-radius:20px;
+  box-shadow:0 0 50px #00f7ff;
+  background:rgba(20,20,20,0.85);
+  display:none;
+  flex-direction:column;
+  align-items:center;
+}
+.container.active{display:flex;}
+
+/* Profile */
+.profile img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #00f7ff;
+  box-shadow:0 0 25px #00f7ff;
+  margin-bottom:15px;
+  animation:float 3s ease-in-out infinite;
+  transition:transform 0.3s;
+}
+.profile img:hover{transform:translateY(-5px) scale(1.05);}
+@keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-8px);}100%{transform:translateY(0);}}
+.profile h1{font-size:28px;margin-bottom:5px;}
+.profile p{font-size:16px;color:#aaa;margin-bottom:20px;}
+
+/* About */
+.about{
+  width:100%;
+  margin-bottom:20px;
+  padding:20px;
+  background:rgba(0,247,255,0.05);
+  border-left:4px solid #00f7ff;
+  border-radius:12px;
+  text-align: left;
+}
+.about h2{font-size:22px;margin-bottom:15px;color:#00f7ff;}
+.about p{font-size:15px;color:#ccc;line-height:1.6;margin-bottom:10px;}
+
+/* Social Icons */
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin:20px 0;
+}
+.social-icons a{
+  font-size:38px;
+  transition:0.3s;
+}
+.social-icons a:hover{transform:translateY(-5px) scale(1.3);text-shadow:0 0 15px currentColor;}
+.social-icons a.linkedin{color:#0A66C2;}
+.social-icons a.whatsapp{color:#25D366;}
+.social-icons a.instagram{color:#E1306C;}
+.social-icons a.threads{color:#5B66F2;}
+.social-icons a.youtube{color:#FF0000;}
+.social-icons a.gmail{color:#D44638;}
+
+/* Tabs */
+.tabs{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:100%;
+  gap:12px;
+}
+.tab-btn, .tab-link{
+  width:100%;
+  max-width:320px;
+  background:#1a1a1a;
+  color:#bbb;
+  border:none;
+  padding:12px 20px;
+  font-size:16px;
+  border-radius:25px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  text-decoration:none;
+}
+.tab-btn i, .tab-link i{
+  font-size:22px; 
+  min-width:25px; 
+}
+.tab-btn span, .tab-link span{
+  flex:1; 
+  text-align:left;
+}
+.tab-btn:hover, .tab-link:hover{color:#00f7ff;box-shadow:0 0 15px #00f7ff;}
+.back-btn{margin-top:20px;background:#00f7ff;color:black;padding:8px 18px;border:none;border-radius:20px;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<!-- HOME -->
+<div id="home" class="container active">
+  <div class="profile">
+    <img src="https://yt3.googleusercontent.com/hJzZAa5AQr00uTp2-bRkYfHtib00kJpeuzJh7zCimevZtza-nZgEYKwxDT7rP8AHKBqkEE3Y=s160-c-k-c0x00ffffff-no-rj" alt="Jithin BS">
+    <h1>JITHIN BS</h1>
+    <p>COMPUTER SCIENCE AND ENGINEERING STUDENT</p>
+  </div>
+
+  <div class="about">
+  <h2>About Me</h2>
+  <p>
+    I’m <strong>Jithin BS</strong>, a Computer Science student at John Cox Engineering College, Kannamoola, TVM, skilled in HTML, CSS, JavaScript, and Figma. 
+  </p>
+  <p>
+    I enjoy building responsive, user-focused websites that blend design and functionality. Constantly exploring AI and emerging technologies, I strive to create digital solutions that are both innovative and efficient.
+  </p>
+</div>
+
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/jithin-bs-892a26348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/qr/IWVWRWNYOCYKE1" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/jithin_x_jithu?igsh=MTBsNzRkNzVjcWxsaw==" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.threads.com/@jithin_x_jithu?invite=0" target="_blank" class="threads"><i class="fab fa-threads"></i></a>
+    <a href="https://youtube.com/@jithin_x_jithu?si=ZJMJkPkHS8baObg0" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+    <a href="mailto:jithinbs007@gmail.com" class="gmail"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn" onclick="showPage('experience')"><i class="fas fa-briefcase"></i><span>Experience</span></button>
+    <button class="tab-btn" onclick="showPage('skills')"><i class="fas fa-code"></i><span>Skills</span></button>
+    <button class="tab-btn" onclick="showPage('projects')"><i class="fas fa-folder-open"></i><span>Projects</span></button>
+    <button class="tab-btn" onclick="window.open('https://www.linkedin.com/in/jithin-bs-892a26348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app')"><i class="fab fa-linkedin"></i><span>LinkedIn</span></button>
+    <button class="tab-btn" onclick="window.open('https://www.instagram.com/jithin_x_jithu?igsh=MTBsNzRkNzVjcWxsaw==')"><i class="fab fa-instagram"></i><span>Instagram</span></button>
+    <button class="tab-btn" onclick="window.open('https://www.threads.com/@jithin_x_jithu?invite=0')"><i class="fab fa-threads"></i><span>Threads</span></button>
+    <button class="tab-btn" onclick="window.open('https://wa.me/qr/IWVWRWNYOCYKE1')"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></button>
+    <button class="tab-btn" onclick="window.open('https://youtube.com/@jithin_x_jithu?si=ZJMJkPkHS8baObg0')"><i class="fab fa-youtube"></i><span>YouTube</span></button>
+    <!-- Corrected Email button as link -->
+    <a href="mailto:jithinbs007@gmail.com" class="tab-link"><i class="fas fa-envelope"></i><span>Email</span></a>
+  </div>a
+</div>
+
+<!-- EXPERIENCE -->
+<div id="experience" class="container">
+  <div class="about">
+    <h2> My Experience</h2>
+    <p><strong>- INTERNSHIP AT KELTRON</strong> – I worked as a Web Development Intern, gaining hands-on experience with HTML, CSS, JavaScript, and backend technologies, while contributing to building responsive and functional web applications.</p>
+    <p><strong>- FREELANCE UI DESIGNER PART TIME </strong> – Designed modern, user-friendly interfaces and experiences using Figma, focusing on intuitive and visually appealing UI/UX solutions.</p>
+    <p><strong> - IEEE DESIGN LEAD</strong> – Served as the IEEE Design Lead at John Cox Engineering College, I lead design initiatives and create innovative solutions for projects and events.</p>
+    <p><strong> - IEEE CERTIFICATE LEAD</strong> – I serve as the IEEE Certificate Lead at John Cox Engineering College, overseeing the design, management, and distribution of certificates for official events and projects.</p>
+    <p><strong> - KERALA INNOVATION FESTIVAL</strong> – Participated in the Kerala Innovation Festival held in Kochi, showcasing innovative ideas and engaging with industry experts.</p>
+    <p><strong> - OFFENCO CYBERSECURITY WORKSHOP </strong> Participated in a Cybersecurity Workshop conducted by Offenco, gaining hands-on knowledge in phishing, threat analysis, and online security practices.</p>
+    <p><strong> - 2ND PRIZE IN IDEA PRESENTATION COMPETITION</strong> - Awarded 2nd Prize in the Idea Presentation Competition at John Cox Engineering College for presenting an innovative and impactful concept.</p>
+  </div>
+  <button class="back-btn" onclick="showPage('home')">Back</button>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="container">
+  <div class="about">
+    <h2>SKILLS</h2>
+    <p>-Python</p>
+    <p>-C programming</p>
+    <p>-Java</p>
+    <p>-HTML5 / CSS3</p>
+    <p>-JavaScript</p>
+    <p>-Responsive Web Design</p>
+    <p>-UI/UX Design</p>
+    <p>-Figma</p>
+    <p>-Bootstrap / Tailwind CSS</p>
+    <p>-React.js</p>
+    <p>-Git & GitHub</p>
+    <p>-Backend Development (Node.js / Express)</p>
+    <p>-Problem Solving & Debugging</p>
+  </div>
+  <button class="back-btn" onclick="showPage('home')">Back</button>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="container">
+  <div class="about">
+    <h2>PROJECTS</h2>
+    <p> <strong> - AGE GUESSING DEVICE </strong> - Developed a Human Age Guessing Device Report that estimates a person’s age using advanced algorithms and interactive input, demonstrating practical applications of web and AI technologies. </p>
+    <p> <strong>- SOLAR INCUBATOR </strong> - Developed a Solar Incubator, a sustainable device that uses solar energy to maintain optimal conditions for incubation, showcasing innovation in renewable energy applications. </p>
+    <p> <strong> - WEBSITES</strong>  - Designed and developed various websites for both official projects and personal part-time work, focusing on responsive, user-friendly, and visually appealing web experiences.</p>
+    <p>- <strong>NEW PROJECTS ONGOING</strong>  - Currently working on new projects, exploring innovative ideas and technologies to build impactful and practical solutions.</p>
+  </div>
+  <button class="back-btn" onclick="showPage('home')">Back</button>
+</div>
+
+<script>
+function showPage(page){
+  document.querySelectorAll('.container').forEach(c=>c.classList.remove('active'));
+  document.getElementById(page).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+particlesJS("particles-js",{
+particles:{
+number:{value:80,density:{enable:true,value_area:800}},
+color:{value:["#0A66C2","#25D366","#E1306C","#5B66F2","#FF0000","#D44638"]},
+shape:{type:"circle"},
+opacity:{value:0.7,random:true},
+size:{value:4,random:true},
+line_linked:{enable:true,distance:150,color:"#00f7ff",opacity:0.2,width:1},
+move:{enable:true,speed:2}
+},
+retina_detect:true
+});
+</script>
+
+</body>
+</html>
